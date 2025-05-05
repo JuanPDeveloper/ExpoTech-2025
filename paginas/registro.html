@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zona de registro ExpoTech 2025</title>
+    <link rel="stylesheet" href="../estilos/registro.css">
+    <link rel="stylesheet" href="../estilos/Nav.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <script src="https://kit.fontawesome.com/caac178fdb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="Nav">
+      <img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" >
+      <ul class="Nav_ul">
+          <a href="/" class="Nav_ul-a">Inicio</a>
+          <a href="/paginas/actividades.html" class="Nav_ul-a">Actividades</a>
+          <a href="/paginas/expositores.html" class="Nav_ul-a">Expositores</a>
+          <a href="/paginas/faq.html" class="Nav_ul-a">FAQ</a>
+          <a href="/paginas/registro.html" class="Nav_ul-a">Registro</a>
+          <a href="/paginas/contacto.html" class="Nav_ul-a">Contacto</a>
+          <div class="idiomaContenedor">
+              <button class="cambiarIdioma">Cambiar idioma</button>
+              <div class="contenedorIdiomas" id="contenedorIdiomas">
+                  <p>Español</p>
+                  <p>Ingles</p>
+              </div>
+          </div>
+      </ul>
+  </nav>
+
+
+    <section class="formulario">
+      <h1 class="formulario_h1">Formulario de registro digital</h1>
+      <div class="formularioContenedor">
+        <img src="https://bio-emprender.iica.int/wp-content/uploads/2023/08/imagen_2023-08-21_203526660.png" alt="ExpoTech 2025" class="HeaderRegister">
+        <form action="POST">
+          <div class="inputVarios">
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="Nombre" id="Nombre" placeholder="Ex: Luisa Chima"/>
+          </div>
+  
+          <div class="inputVarios">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" placeholder="Ex: luisachima@mail.com"/>
+          </div>
+  
+          <div class="inputVarios">
+            <label for="Date">Fecha de nacimiento</label>
+            <input type="date" name="Date" id="Date" />
+          </div>
+  
+          <div class="inputVarios">
+            <label for="Telefono">Telefono</label>
+            <input type="tel" name="Telefono" id="Telefono" placeholder="Ex: 1212 2223"/>
+          </div>
+  
+          <div class="inputVarios">
+            <label for="Password">Contraseña</label>
+            <input type="password" name="Password" id="Password" placeholder="Min 8, Ex: ********"/>
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye-slash"></i>
+          </div>
+  
+          <div class="inputVarios">
+            <label for="RePassword">Verificar contraseña</label>
+            <input type="password" name="RePassword" id="RePassword" placeholder="Min 8, Ex: ********"/>
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-eye-slash"></i>
+          </div>
+  
+          <div class="inputVarios2">
+            <input type="checkbox" name="Checkbox" id="Checkbox">
+            <label for="Checkbox">Acepto los terminos y condiciones</label>
+          </div>
+          <div class="inputVarios2">
+            <input type="checkbox" name="CheckboxRemember" id="CheckboxRemember">
+            <label for="CheckboxRemember">Recordarme</label>
+          </div>
+  
+          <div class="sendSection">
+            <i class="fa-solid fa-paper-plane"></i>
+            <button id="sendBTN">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="socialMedia">
+          <article class="socialMedia_article">
+              <i class="fa-brands fa-square-instagram"></i>
+              <p>@ExpoTech2025Ar</p>
+          </article>
+          <article class="socialMedia_article">
+              <i class="fa-brands fa-facebook"></i>
+              <p>@ExpoTech2025Ar</p>
+          </article>
+          <article class="socialMedia_article">
+              <i class="fa-solid fa-envelope"></i>
+              <p>informacion@expotech.ar.com</p>
+          </article>
+          <article class="socialMedia_article">
+              <i class="fa-brands fa-square-whatsapp"></i>
+              <p>+506 1212-6776</p>
+          </article>
+      </div>
+      
+      <p>&copy; Dorian Villalobos Varela</p>
+      <p>&copy; Juan Pablo García Ramos</p>
+      </footer>
+  </body>
+</html>

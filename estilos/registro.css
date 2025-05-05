@@ -1,0 +1,107 @@
+:root {
+  --blue: #01337f;
+  --blue2: #024bb9;
+  --white: #fff;
+}
+
+.formularioContenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: auto;
+  border-right: 5px solid var(--blue);
+}
+
+.formulario_h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.inputVarios {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  position: relative;
+}
+
+.inputVarios2 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.inputVarios label {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.inputVarios input {
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: var(--white);
+    border: none;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.inputVarios input:focus {
+  background-color: var(--blue2);
+  color: var(--white);
+  border: none;
+}
+
+.fa-paper-plane {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+#sendBTN {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.sendSection {
+  background-color: var(--blue);
+  max-width: max-content;
+  padding: 10px 50px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.HeaderRegister {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.fa-eye,
+.fa-eye-slash {
+  color: var(--blue2);
+  position: absolute;
+  right: 0;
+  top: 58px;
+  cursor: pointer;
+}
+
+.fa-eye-slash {
+  display: none;
+}

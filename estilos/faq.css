@@ -1,0 +1,55 @@
+:root {
+  --blue: #01337f;
+  --blue2: #024bb9;
+  --white: #fff;
+}
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-image: url("/IMGS/Header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 450px;
+  position: relative;
+}
+
+.FAQs{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  margin-left: 50px;
+}
+
+.FAQ summary{
+  font-weight: bold;
+}
+
+.FAQ{
+  font-size: 1.4rem;
+}
+
+.FAQ-p{
+  font-size: 1.2rem;
+  max-width: 80%;
+}
+
+details{
+  cursor: pointer;
+}
+
+footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
