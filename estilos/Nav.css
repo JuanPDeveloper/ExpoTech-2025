@@ -2,13 +2,73 @@
   --blue: #01337f;
   --blue2: #024bb9;
   --white: #fff;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.toggle-switch_mobile,
+#MobileNavOptions {
+  display: none;
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menus .fa-solid {
+  display: none;
+}
+
+.fa-bars,
+.fa-solid {
+  display: none;
+  font-size: 2rem;
+}
+
+.themes {
+  background-color: var(--blue);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#LightModeBTN,
+#DarkModeBTN {
+  padding: 5px;
+}
+
+#LightModeBTN {
+  display: none;
 }
 
 .Nav {
   display: flex;
-  justify-content: space-between;
-  width: 95%;
+  justify-content: center;
   margin: 30px auto;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  inset: 0;
+  z-index: 999;
+}
+
+.Nav_img {
+  width: 60%;
+  display: block;
+  margin: auto;
 }
 
 .Nav_ul {
@@ -21,7 +81,7 @@
 .Nav_ul-a {
   text-decoration: none;
   color: #535252;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all;
   padding: 5px;
   border-radius: 5px;
@@ -31,7 +91,7 @@
 .Nav_ul-a:hover {
   text-decoration: none;
   color: #535252;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: var(--blue);
   color: var(--white);
 }
@@ -50,7 +110,7 @@
   border: none;
   background-color: var(--blue);
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: all;
   transition-duration: 200ms;
@@ -61,10 +121,10 @@
 
 .contenedorIdiomas {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 70px;
+  left: 0px;
   line-height: 0.5;
   padding: 0 20px;
   display: none;
@@ -80,4 +140,104 @@
 }
 .contenedorIdiomas p:hover {
   background-color: var(--blue2);
+}
+
+/* Media Queries Telefono */
+
+@media screen and (max-width: 1023px) {
+  .Nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .Nav_img {
+    width: 50%;
+  }
+
+  .Nav_ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--blue);
+    padding: 130px 0;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .Nav_ul-a {
+    color: var(--blue);
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .idiomaContenedor button {
+    background-color: var(--white);
+    color: var(--blue);
+  }
+  .idiomaContenedor button:hover {
+    background-color: var(--blue2);
+    color: var(--white);
+  }
+
+  .contenedorIdiomas {
+    color: var(--blue2);
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    line-height: 0.5;
+    padding: 0 20px;
+    display: none;
+    background-color: var(--white);
+  }
+
+  .contenedorIdiomas p {
+    padding: 10px;
+    border-radius: 5px;
+    transition: all;
+    transition-duration: 200ms;
+    cursor: pointer;
+  }
+  .contenedorIdiomas p:hover {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .Nav_img {
+    width: 60%;
+  }
+
+  .menus .fa-bars {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    cursor: pointer;
+    color: var(--blue);
+  }
+
+  .menus .fa-xmark {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    cursor: pointer;
+    color: var(--blue);
+  }
+
+  .themes {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+  }
 }

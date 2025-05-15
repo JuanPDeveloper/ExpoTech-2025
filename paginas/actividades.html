@@ -14,19 +14,23 @@
   </head>
   <body>
     <nav class="Nav">
-      <img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" />
+      <a href="/"><img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" /></a>
       <ul class="Nav_ul">
-        <a href="/" class="Nav_ul-a">Inicio</a>
-        <a href="/paginas/actividades.html" class="Nav_ul-a">Actividades</a>
-        <a href="/paginas/expositores.html" class="Nav_ul-a">Expositores</a>
-        <a href="/paginas/faq.html" class="Nav_ul-a">FAQ</a>
-        <a href="/paginas/registro.html" class="Nav_ul-a">Registro</a>
-        <a href="/paginas/contacto.html" class="Nav_ul-a">Contacto</a>
+        <a href="/" class="Nav_ul-a" id="Nav_Inicio">Inicio</a>
+        <a href="/paginas/actividades.html" class="Nav_ul-a" id="Nav_Actividades">Actividades</a>
+        <a href="/paginas/expositores.html" class="Nav_ul-a" id="Nav_Expositores">Expositores</a>
+        <a href="/paginas/faq.html" class="Nav_ul-a" id="Nav_FAQ">FAQ</a>
+        <a href="/paginas/registro.html" class="Nav_ul-a" id="Nav_Registro">Registro</a>
+        <a href="/paginas/contacto.html" class="Nav_ul-a" id="Nav_Contacto">Contacto</a>
+        <div class="themes" id="toggleMode">
+          <i class="fa-solid fa-moon" id="DarkModeBTN"></i>
+          <i class="fa-solid fa-sun" id="LightModeBTN"></i>
+      </div>
         <div class="idiomaContenedor">
-          <button class="cambiarIdioma">Cambiar idioma</button>
+          <button class="cambiarIdioma" id="ChangeLanguageBTN">Cambiar idioma</button>
           <div class="contenedorIdiomas" id="contenedorIdiomas">
-            <p>Español</p>
-            <p>Ingles</p>
+            <p id="Spanish">Español</p>
+            <p id="English">Ingles</p>
           </div>
         </div>
       </ul>
@@ -35,31 +39,27 @@
     <section class="cards">
       <article class="card">
         <img src="/IMGS/Expositores/Maikel.jpeg"" alt="" class="img">
-        <span>Maikel</span>
-        <h1 class="info">Maikel | 24 años <br /></h1>
-        <p class="info">
+        <div class="edadAutor">
+          <p>Maikel</p>
+          <span>24 <span class="span2">años</span></span>
+        </div>
+        <p class="info" id="infoMaikel">
           Se va a realizar una charla donde se toque el tema del desarrollo de
           software, tambien se van a aclarar dudas y mucho más.
-          <br />
         </p>
         <div class="share">
-          <button id="botonLike">
-            <svg
-              class="empty"
-              id="botonLikeIcon1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-            >
-              <path fill="none" d="M0 0H24V24H0z"></path>
-              <path
-                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"
-              ></path>
-            </svg>
-
-            Me gusta
-          </button>
+          <div class="div1">
+            <p class="div1_title hourActivity">Hora</p>
+            <p>2:30</p>
+          </div>
+          <div class="div2">
+            <p class="div2_title placeActivity">Lugar</p>
+            <p>Liceo nuevo de Santo Domingo</p>
+          </div>
+          <div class="div3">
+            <p class="div3_title dateActivity">Fecha</p>
+            <p>20/7/2025</p>
+          </div>
         </div>
       </article>
       <article class="card">
@@ -67,32 +67,29 @@
           src="https://d39ozdhkcyy1f8.cloudfront.net/110823_luis_miguel_853d16433f.jpg"
           class="img"
         />
-        <span>Miguel</span>
-        <p class="info">
-          Hola soy Miguel , Espero que esten bien queria informarles que vamos a
-          realizar unas actividades que consisten en unas conferencias para
-          explicar el a fondo el tema de informatica y mucho más. <br />
-          Se realizara el día jueves a las 10:30 a.m en el salon comunal de San
-          Jose
+
+        <div class="edadAutor">
+          <p>Miguel</p>
+          <span>32 <span class="span2">años</span></span>
+        </div>
+
+        <p class="info" id="infoMiguel">
+          Se va hacer una conferencias para para explicar a fondo el tema de la
+          informatica para aclarar dudas y mucho más.
         </p>
         <div class="share">
-          <button id="botonLike2">
-            <svg
-              class="empty"
-              id="botonLikeIcon2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-            >
-              <path fill="none" d="M0 0H24V24H0z"></path>
-              <path
-                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"
-              ></path>
-            </svg>
-
-            Me gusta
-          </button>
+          <div class="div1">
+            <p class="div1_title hourActivity">Hora</p>
+            <p>1:00</p>
+          </div>
+          <div class="div2">
+            <p class="div3_title placeActivity">Lugar</p>
+            <p>Club campestre</p>
+          </div>
+          <div class="div3">
+          <p class="div3_title dateActivity">Fecha</p>
+            <p>10/7/2025</p>
+          </div>
         </div>
       </article>
       <article class="card">
@@ -101,31 +98,27 @@
           alt=""
           class="img"
         />
-        <span>Laura</span>
-        <p class="info">
-          Hola soy Laura, soy una especializada en el area de la electronica, me
-          gustaria decirles que el día viernes a las 2:15 p.m voy a realizar un
-          taller de electronica explicando y haciendo muchas actividades. <br />
-          Los esperamos en la bacilica de Santo Domingo
+        <div class="edadAutor">
+          <p>Laura</p>
+          <span>20 <span class="span2">años</span></span>
+        </div>
+        <p class="info" id="infoLaura">
+          Se realizara un taller basado en la electronica para que aprendan del
+          tema y sepan como se hace.
         </p>
         <div class="share">
-          <button id="botonLike3">
-            <svg
-              class="empty"
-              id="botonLikeIcon3"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-            >
-              <path fill="none" d="M0 0H24V24H0z"></path>
-              <path
-                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z"
-              ></path>
-            </svg>
-
-            Me gusta
-          </button>
+          <div class="div1">
+            <p class="div1_title hourActivity">Hora</p>
+            <p>5:30</p>
+          </div>
+          <div class="div2">
+            <p class="div2_title placeActivity">Lugar</p>
+            <p>Salon de Pedregal</p>
+          </div>
+          <div class="div3">
+            <p class="div3_title dateActivity">Fecha</p>
+            <p>16/7/2025</p>
+          </div>
         </div>
       </article>
     </section>
@@ -156,4 +149,5 @@
   </body>
   <script src="/data/nav.js"></script>
   <script src="/data/varios.js"></script>
+  <script src="/data/cambioIdiomaActividades.js"></script>
 </html>

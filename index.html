@@ -1,88 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExpoTech 2025</title>
-    <link rel="stylesheet" href="/estilos/Nav.css">
-    <link rel="stylesheet" href="/estilos/style.css">
-    <script src="https://kit.fontawesome.com/caac178fdb.js" crossorigin="anonymous"></script>
-</head>
-<body">
+    <link rel="stylesheet" href="/estilos/Nav.css" />
+    <link rel="stylesheet" href="/estilos/style.css" />
+    <link rel="stylesheet" href="/estilos/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/caac178fdb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav class="Nav">
-        <img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img">
-        <ul class="Nav_ul">
-            <a href="/" class="Nav_ul-a">Inicio</a>
-            <a href="/paginas/actividades.html" class="Nav_ul-a">Actividades</a>
-            <a href="/paginas/expositores.html" class="Nav_ul-a">Expositores</a>
-            <a href="/paginas/faq.html" class="Nav_ul-a">FAQ</a>
-            <a href="/paginas/registro.html" class="Nav_ul-a">Registro</a>
-            <a href="/paginas/contacto.html" class="Nav_ul-a">Contacto</a>
-            <div class="idiomaContenedor">
-                <button class="cambiarIdioma">Cambiar idioma</button>
-                <div class="contenedorIdiomas" id="contenedorIdiomas">
-                    <p>Español</p>
-                    <p>Ingles</p>
-                </div>
-            </div>
-        </ul>
+      <div class="menus">
+        <a href="/"
+          ><img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img"
+        /></a>
+        <i class="fa-solid fa-bars" id="OpenMenu"></i>
+      </div>
+      <ul class="Nav_ul" id="Nav_ul">
+        <a href="/" class="Nav_ul-a" id="Nav_Inicio">Inicio</a>
+        <a
+          href="/paginas/actividades.html"
+          class="Nav_ul-a"
+          id="Nav_Actividades"
+          >Actividades</a
+        >
+        <a
+          href="/paginas/expositores.html"
+          class="Nav_ul-a"
+          id="Nav_Expositores"
+          >Expositores</a
+        >
+        <a href="/paginas/faq.html" class="Nav_ul-a" id="Nav_FAQ">FAQ</a>
+        <a href="/paginas/registro.html" class="Nav_ul-a" id="Nav_Registro"
+          >Registro</a
+        >
+        <a href="/paginas/contacto.html" class="Nav_ul-a" id="Nav_Contacto"
+          >Contacto</a
+        >
+        <div class="themes" id="toggleMode">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </div>
+        <div class="idiomaContenedor">
+          <button class="cambiarIdioma" id="ChangeLanguageBTN">
+            Cambiar idioma
+          </button>
+          <div class="contenedorIdiomas" id="contenedorIdiomas">
+            <p id="Spanish">Español</p>
+            <p id="English">Ingles</p>
+          </div>
+        </div>
+      </ul>
     </nav>
 
     <header>
-        <div class="box1">
-            <h1 class="box1_h1">ExpoTech  <br><span>2025</span></h1>
-        <p class="box1_p"><span>Congreso internacional en Ciencia</span>,Tecnología, <span>Innovacion y Educación </span>en Ingeniería</p>
-        <button class="box1_button">Obtener acceso</button>
-        </div>
+      <div class="box1">
+        <h1 class="box1_h1">ExpoTech <br /><span>2025</span></h1>
+        <p class="box1_p" id="box1_p">
+          <span
+            >Congreso internacional en Ciencia,Tecnología,Innovacion y Educación
+            en Ingeniería
+          </span>
+        </p>
+        <button class="box1_button" id="box1_btn">Obtener acceso</button>
+      </div>
 
-        <div class="box2">
-            <p>Faltan:</p>
-            <p><span id="dias">13</span> Días</p>
-            <p><span id="horas">12</span> Horas</p>
-            <p><span id="minutos">35</span> Min</p>
-            <p><span id="segundos">00</span> Seg</p> <!- Añadimos segundos -->
+      <div class="box2">
+        <p id="box2_Faltan">Faltan:</p>
+        <div>
+          <p><span id="dias">13</span><span id="DiasP">Días</span></p>
+          <p><span id="horas">12</span><span id="HorasP">Horas</span></p>
+          <p><span id="minutos">35</span> Min</p>
+          <p><span id="segundos">00</span> Seg</p>
         </div>
+      </div>
 
-        <div class="Registro">
-            <a href="">Registro presencial</a>
-            <a href="">Registro online</a>
-        </div>
+      <div class="Registro">
+        <a href="" id="RegistroPresencial">Registro presencial</a>
+        <a href="/paginas/registro.html" id="RegistroOnline">Registro online</a>
+      </div>
     </header>
 
     <section class="info">
-        <h2 class="info_h2">¿Qué es la ExpoTécnica?</h2>
-        <p class="info_p">La EXPOTÉCNICA es un espacio formativo que promueve el desarrollo integral de estudiantes de la Educación Técnica Profesional, potenciando sus competencias técnicas, humanas, lingüísticas y emprendedoras. Busca fomentar la innovación, la investigación y el uso responsable de tecnologías, facilitando su empleabilidad y la creación de oportunidades sostenibles.</p>
-        <p class="info_p">Este evento permite a las y los estudiantes demostrar sus habilidades ante la comunidad, explorar nuevas experiencias de aprendizaje y conectar con profesionales de diversas áreas como la ingeniería, el diseño, la contabilidad, el turismo, la salud ocupacional, entre otros. Además, fortalece el vínculo entre la educación y las demandas del sector productivo, promoviendo vocaciones técnicas clave para el desarrollo del país.</p>
+      <h2 class="info_h2">¿Qué es la ExpoTécnica?</h2>
+      <p class="info_p">
+        La EXPOTÉCNICA es un espacio formativo que promueve el desarrollo
+        integral de estudiantes de la Educación Técnica Profesional, potenciando
+        sus competencias técnicas, humanas, lingüísticas y emprendedoras. Busca
+        fomentar la innovación, la investigación y el uso responsable de
+        tecnologías, facilitando su empleabilidad y la creación de oportunidades
+        sostenibles.
+      </p>
+      <p class="info_p info_p-2">
+        Este evento permite a las y los estudiantes demostrar sus habilidades
+        ante la comunidad, explorar nuevas experiencias de aprendizaje y
+        conectar con profesionales de diversas áreas como la ingeniería, el
+        diseño, la contabilidad, el turismo, la salud ocupacional, entre otros.
+        Además, fortalece el vínculo entre la educación y las demandas del
+        sector productivo, promoviendo vocaciones técnicas clave para el
+        desarrollo del país.
+      </p>
     </section>
 
     <section>
-        <video class="video" src="/Videos/Expotecnica.mp4" muted autoplay></video>
+      <video
+        class="video"
+        src="/Videos/Expotecnica.mp4"
+        muted
+        autoplay
+        controls
+      ></video>
     </section>
     <footer>
-    <div class="socialMedia">
+      <div class="socialMedia">
         <article class="socialMedia_article">
-            <i class="fa-brands fa-square-instagram"></i>
-            <p>@ExpoTech2025Ar</p>
+          <i class="fa-brands fa-square-instagram"></i>
+          <p>@ExpoTech2025Ar</p>
         </article>
         <article class="socialMedia_article">
-            <i class="fa-brands fa-facebook"></i>
-            <p>@ExpoTech2025Ar</p>
+          <i class="fa-brands fa-facebook"></i>
+          <p>@ExpoTech2025Ar</p>
         </article>
         <article class="socialMedia_article">
-            <i class="fa-solid fa-envelope"></i>
-            <p>informacion@expotech.ar.com</p>
+          <i class="fa-solid fa-envelope"></i>
+          <p>informacion@expotech.ar.com</p>
         </article>
         <article class="socialMedia_article">
-            <i class="fa-brands fa-square-whatsapp"></i>
-            <p>+506 1212-6776</p>
+          <i class="fa-brands fa-square-whatsapp"></i>
+          <p>+506 1212-6776</p>
         </article>
-    </div>
-    
-    <p>&copy; Dorian Villalobos Varela</p>
-    <p>&copy; Juan Pablo García Ramos</p>
-    </footer>
-</body>
-<script src="/data/nav.js"></script>
-<script src="/data/contador.js"></script>
+      </div>
 
+      <p>&copy; Dorian Villalobos Varela</p>
+      <p>&copy; Juan Pablo García Ramos</p>
+    </footer>
+  </body>
+  <script src="/data/nav.js"></script>
+  <script src="/data/contador.js"></script>
+  <script src="/data/cambioIdioma.js"></script>
 </html>

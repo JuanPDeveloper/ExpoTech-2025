@@ -12,46 +12,49 @@
     </head>
 <body>
     <nav class="Nav">
-        <img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" >
+        <a href="/"><img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" /></a>
         <ul class="Nav_ul">
-            <a href="/" class="Nav_ul-a">Inicio</a>
-            <a href="/paginas/actividades.html" class="Nav_ul-a">Actividades</a>
-            <a href="/paginas/expositores.html" class="Nav_ul-a">Expositores</a>
-            <a href="/paginas/faq.html" class="Nav_ul-a">FAQ</a>
-            <a href="/paginas/registro.html" class="Nav_ul-a">Registro</a>
-            <a href="/paginas/contacto.html" class="Nav_ul-a">Contacto</a>
-            <div class="idiomaContenedor">
-                <button class="cambiarIdioma">Cambiar idioma</button>
-                <div class="contenedorIdiomas" id="contenedorIdiomas">
-                    <p>Español</p>
-                    <p>Ingles</p>
-                </div>
+          <a href="/" class="Nav_ul-a" id="Nav_Inicio">Inicio</a>
+          <a href="/paginas/actividades.html" class="Nav_ul-a" id="Nav_Actividades">Actividades</a>
+          <a href="/paginas/expositores.html" class="Nav_ul-a" id="Nav_Expositores">Expositores</a>
+          <a href="/paginas/faq.html" class="Nav_ul-a" id="Nav_FAQ">FAQ</a>
+          <a href="/paginas/registro.html" class="Nav_ul-a" id="Nav_Registro">Registro</a>
+          <a href="/paginas/contacto.html" class="Nav_ul-a" id="Nav_Contacto">Contacto</a>
+          <div class="idiomaContenedor">
+            <button class="cambiarIdioma" id="ChangeLanguageBTN">Cambiar idioma</button>
+            <div class="contenedorIdiomas" id="contenedorIdiomas">
+              <p id="Spanish">Español</p>
+              <p id="English">Ingles</p>
             </div>
+          </div>
         </ul>
-    </nav>
+      </nav>
 
     <section class="Formulario">
-        <h2>Formulario de Contacto</h2>
+        <h2 id="formH2">Formulario de Contacto</h2>
         <div class="bloqueFormulario">
            <form action="#" method="post">
             <div>
-                <label for="nombre">Nombre</label>
+                <label for="nombre" id="labelNombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
             </div>
             <div>
-                <label for="email"> Correo</label>
+                <label for="email" id="labelEmail"> Correo</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div>
-                <label for="Asunto">Asunto</label>
+                <label for="Asunto" id="labelAsunto">Asunto</label>
                 <input type="text" id="Asunto" name="Asunto">
             </div>
             <div>
-            <label for="mensaje">Mensaje</label>
+            <label for="mensaje" id="labelMensaje">Mensaje</label>
         <textarea name="mensaje" id="mensaje" required ar></textarea>
     </div>
         
-        <button type="submit" id="Send">Enviar</button> 
+        <div class="sendSection">
+        <i class="fa-solid fa-paper-plane"></i>
+        <button id="sendBTN">Enviar</button>
+      </div>
         </form> 
 
         <div>
@@ -60,9 +63,11 @@
         </div>
         
     <section>
-        <h2>Nuestra Ubicacion</h2>
+        <h2 id="locationH2">Nuestra Ubicacion</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125759.3281451655!2d-84.19574848193366!3d9.935704678161523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2zU2FuIEpvc8Op!5e0!3m2!1ses-419!2scr!4v1745419795211!5m2!1ses-419!2scr" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+</article>
+<article class="card">
     <footer>
         <div class="socialMedia">
             <article class="socialMedia_article">
@@ -88,4 +93,5 @@
         </footer>
     </body>
     <script src="/data/nav.js"></script>
+    <script src="/data/cambioIdiomaContacto.js"></script>
     </html>

@@ -3,6 +3,81 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  margin-left: auto;
+  margin-right: 35px;
+  position: fixed;
+  top: 15px;
+  right: 85px;
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
 :root {
@@ -11,13 +86,12 @@ body {
   --white: #fff;
 }
 
-
 form {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border-left: 5px solid var(--blue);
 }
 
-form div{
+form div {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -28,7 +102,7 @@ form div{
   padding: 10px;
 }
 
-input{
+input {
   background-color: var(--blue);
   padding: 10px;
   border-radius: 5px;
@@ -39,11 +113,11 @@ input{
   transition-duration: 200ms;
 }
 
-input:focus{
+input:focus {
   background-color: var(--blue2);
 }
 
-textarea{
+textarea {
   border: none;
   font-size: 1.2rem;
   color: var(--white);
@@ -53,27 +127,38 @@ textarea{
   padding: 10px;
 }
 
-#Send{
-  padding: 10px;
-  font-size: 1.2rem;
-  background-color: var(--blue2);
+.fa-paper-plane {
   color: var(--white);
-  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+#sendBTN {
+  background-color: transparent;
   border: none;
-  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--white);
 }
 
-.Formulario h2{
-  font-size: 2.2rem;
+.sendSection {
+  background-color: var(--blue);
+  max-width: max-content;
+  padding: 10px 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
-iframe{
+.Formulario h2 {
+  font-size: 1.4rem;
+}
+
+iframe {
   width: 100%;
 }
 
-.bloqueFormulario{
+.bloqueFormulario {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 80%;
   margin: auto;
   min-height: 300px;
@@ -83,10 +168,16 @@ iframe{
   overflow: hidden;
 }
 
-.imgExpo{
+.imgExpo {
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
+}
 
+@media screen and (max-width: 768px) {
+  .bloqueFormulario {
+    display: flex;
+    flex-direction: column;
+  }
 }

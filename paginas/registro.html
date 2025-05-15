@@ -11,23 +11,23 @@
   </head>
   <body>
     <nav class="Nav">
-      <img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" >
+      <a href="/"><img src="/IMGS/logo.webp" alt="Logo UNAD-ICETEX" class="Nav_img" /></a>
       <ul class="Nav_ul">
-          <a href="/" class="Nav_ul-a">Inicio</a>
-          <a href="/paginas/actividades.html" class="Nav_ul-a">Actividades</a>
-          <a href="/paginas/expositores.html" class="Nav_ul-a">Expositores</a>
-          <a href="/paginas/faq.html" class="Nav_ul-a">FAQ</a>
-          <a href="/paginas/registro.html" class="Nav_ul-a">Registro</a>
-          <a href="/paginas/contacto.html" class="Nav_ul-a">Contacto</a>
-          <div class="idiomaContenedor">
-              <button class="cambiarIdioma">Cambiar idioma</button>
-              <div class="contenedorIdiomas" id="contenedorIdiomas">
-                  <p>Español</p>
-                  <p>Ingles</p>
-              </div>
+        <a href="/" class="Nav_ul-a" id="Nav_Inicio">Inicio</a>
+        <a href="/paginas/actividades.html" class="Nav_ul-a" id="Nav_Actividades">Actividades</a>
+        <a href="/paginas/expositores.html" class="Nav_ul-a" id="Nav_Expositores">Expositores</a>
+        <a href="/paginas/faq.html" class="Nav_ul-a" id="Nav_FAQ">FAQ</a>
+        <a href="/paginas/registro.html" class="Nav_ul-a" id="Nav_Registro">Registro</a>
+        <a href="/paginas/contacto.html" class="Nav_ul-a" id="Nav_Contacto">Contacto</a>
+        <div class="idiomaContenedor">
+          <button class="cambiarIdioma" id="ChangeLanguageBTN">Cambiar idioma</button>
+          <div class="contenedorIdiomas" id="contenedorIdiomas">
+            <p id="Spanish">Español</p>
+            <p id="English">Ingles</p>
           </div>
+        </div>
       </ul>
-  </nav>
+    </nav>
 
 
     <section class="formulario">
@@ -36,34 +36,34 @@
         <img src="https://bio-emprender.iica.int/wp-content/uploads/2023/08/imagen_2023-08-21_203526660.png" alt="ExpoTech 2025" class="HeaderRegister">
         <form action="POST">
           <div class="inputVarios">
-            <label for="Nombre">Nombre</label>
+            <label for="Nombre" id="labelNombre">Nombre</label>
             <input type="text" name="Nombre" id="Nombre" placeholder="Ex: Luisa Chima"/>
           </div>
   
           <div class="inputVarios">
-            <label for="Email">Email</label>
+            <label for="Email" id="labelEmail">Email</label>
             <input type="email" name="Email" id="Email" placeholder="Ex: luisachima@mail.com"/>
           </div>
   
           <div class="inputVarios">
-            <label for="Date">Fecha de nacimiento</label>
+            <label for="Date" id="labelDate">Fecha de nacimiento</label>
             <input type="date" name="Date" id="Date" />
           </div>
   
           <div class="inputVarios">
-            <label for="Telefono">Telefono</label>
+            <label for="Telefono" id="labelTelefono">Teléfono</label>
             <input type="tel" name="Telefono" id="Telefono" placeholder="Ex: 1212 2223"/>
           </div>
   
           <div class="inputVarios">
-            <label for="Password">Contraseña</label>
+            <label for="Password" id="labelContrasena">Contraseña</label>
             <input type="password" name="Password" id="Password" placeholder="Min 8, Ex: ********"/>
             <i class="fa-solid fa-eye"></i>
             <i class="fa-solid fa-eye-slash"></i>
           </div>
   
           <div class="inputVarios">
-            <label for="RePassword">Verificar contraseña</label>
+            <label for="RePassword" id="labelReContrasena">Verificar contraseña</label>
             <input type="password" name="RePassword" id="RePassword" placeholder="Min 8, Ex: ********"/>
             <i class="fa-solid fa-eye"></i>
             <i class="fa-solid fa-eye-slash"></i>
@@ -71,11 +71,11 @@
   
           <div class="inputVarios2">
             <input type="checkbox" name="Checkbox" id="Checkbox">
-            <label for="Checkbox">Acepto los terminos y condiciones</label>
+            <label for="Checkbox" id="labelCondiciones">Acepto los terminos y condiciones</label>
           </div>
           <div class="inputVarios2">
             <input type="checkbox" name="CheckboxRemember" id="CheckboxRemember">
-            <label for="CheckboxRemember">Recordarme</label>
+            <label for="CheckboxRemember" id="labelRecordar">Recordarme</label>
           </div>
   
           <div class="sendSection">
@@ -110,4 +110,6 @@
       <p>&copy; Juan Pablo García Ramos</p>
       </footer>
   </body>
+  <script src="/data/nav.js"></script>
+  <script src="/data/cambioIdiomaRegister.js"></script>
 </html>

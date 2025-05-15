@@ -4,6 +4,11 @@
   --white: #fff;
 }
 
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .formularioContenedor {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -14,7 +19,7 @@
 
 .formulario_h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: var(--blue);
   text-transform: uppercase;
   font-weight: bold;
@@ -42,30 +47,34 @@ form {
   justify-items: center;
   align-items: center;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .inputVarios label {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   text-align: left;
 }
 
 .inputVarios input {
-    background-color: var(--blue);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    color: var(--white);
-    border: none;
-    transition: all;
-    transition-duration: 200ms;
+  background-color: var(--blue);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--white);
+  border: none;
+  transition: all;
+  transition-duration: 200ms;
 }
 
 .inputVarios input:focus {
   background-color: var(--blue2);
   color: var(--white);
   border: none;
+}
+
+.inputVarios2 label {
+  color: black;
 }
 
 .fa-paper-plane {
@@ -104,4 +113,17 @@ form {
 
 .fa-eye-slash {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .formularioContenedor {
+    display: flex;
+    flex-direction: column-reverse;
+    border: 0;
+    gap: 30px;
+  }
+
+  form {
+    border-right: 5px solid var(--blue);
+  }
 }

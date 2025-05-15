@@ -4,7 +4,12 @@
   --blue: #01337f;
   --blue2: #024bb9;
   --white: #fff;
+  --light: #d8dbe0;
+  --black: #000;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
 }
+
 @keyframes pulse {
   50% {
     transform: scale(1.1);
@@ -17,15 +22,16 @@ body {
   padding: 0;
 }
 
+body.dark-mode {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 header {
   background-image: url("/IMGS/Header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-}
-
-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 450px;
@@ -52,7 +58,7 @@ header {
 
 .box1_p {
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -65,7 +71,7 @@ header {
   background-color: var(--blue2);
   color: var(--white);
   padding: 10px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: auto;
   text-decoration: none;
   border: none;
@@ -75,11 +81,13 @@ header {
   border-radius: 5px;
 }
 
-.box1_button:hover{
+.box1_button:hover {
   background-color: var(--blue);
 }
 
-.box2 {
+.box2,
+#DiasP,
+#HorasP {
   color: var(--white);
   margin: auto;
   font-size: 1.2rem;
@@ -89,7 +97,7 @@ header {
 }
 
 .box2 p span {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .Registro {
@@ -114,12 +122,12 @@ header {
   transition-duration: 200ms;
 }
 
-.Registro a:hover{
+.Registro a:hover {
   background-color: var(--blue);
   animation: none;
 }
 
-.video{
+.video {
   width: 100%;
   height: 700px;
   object-fit: cover;
@@ -127,38 +135,38 @@ header {
   margin-top: 60px;
 }
 
-.info{
+.info {
   margin-left: 60px;
   width: 90%;
 }
 
-.info_h2{
+.info_h2 {
   font-size: 2em;
   color: var(--blue);
 }
 
-.info_p{
+.info_p {
   font-size: 1.2rem;
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 0;
 }
 
-footer p{
+footer p {
   font-size: 1.2rem;
 }
 
-.socialMedia{
+.socialMedia {
   display: flex;
   justify-content: space-around;
   width: 80%;
 }
 
-.socialMedia_article{
+.socialMedia_article {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -170,13 +178,95 @@ footer p{
   cursor: pointer;
 }
 
-.socialMedia_article:hover{
+.socialMedia_article:hover {
   background-color: var(--blue);
   color: var(--white);
 }
 
-.socialMedia_article p:before{
-content: "|";
-padding: 10px;
+.socialMedia_article p:before {
+  content: "|";
+  padding: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .box1 {
+    display: flex;
+    padding: 30px 0;
+  }
+
+  .box1_h1 {
+    color: var(--white);
+    font-size: 3rem;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .box1_h1 span {
+    margin-left: 0;
+  }
+
+  .box2 {
+    width: 80%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Registro {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .video {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+  }
+
+  .info {
+    margin-left: 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .socialMedia_article {
+    gap: 5px;
+    padding: 0 30px;
+    transition: all;
+    transition-duration: 200ms;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .socialMedia_article:hover {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .socialMedia_article p:before {
+    content: "|";
+    padding: 10px;
+  }
+}
